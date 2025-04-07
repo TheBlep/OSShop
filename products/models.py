@@ -31,3 +31,19 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+class ProductReview(models.Model):
+    #user = models.ForeignKey(User, on_delete==models.SET_NULL, null=True)
+    #product = models.ForeignKey(Product, on_delete=models.SET_NULL, null=True, related_name=remove???Model)
+    review = models.TextField()
+    #rating = models.IntegerField(choice=RATING, default=None)
+    date = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name_plural = "Product Reviews"
+    
+    def __str__(self):
+        return self.product.title
+
+    def get_rating(self):
+        return self.rating

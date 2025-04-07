@@ -23,6 +23,12 @@ class CategoryAdmin(admin.ModelAdmin):
         'name',
     )
 
+class ProductReview(admin.ModelAdmin):
+    list_display = (
+        'review',
+        #'rating',
+        'date',
+    )
 
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)
