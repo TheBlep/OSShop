@@ -31,7 +31,7 @@ DEBUG = 'DEVELOPMENT' in os.environ
 ALLOWED_HOSTS = [
     '127.0.0.1',  # vs code preview
     'localhost',  # listen for stripe webhooks
-    'https://osshop-c17df3faecbf.herokuapp.com'   # heroku application
+    'osshop-c17df3faecbf.herokuapp.com'   # heroku application
 ]
 
 
