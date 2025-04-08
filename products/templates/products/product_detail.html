@@ -96,6 +96,23 @@
                             
                         </div>
                     </form>
+                    <!-- Customer Reviews Section -->
+                    <div class="mt-5 pt-4 border-top">
+                        <h5 class="mb-3 font-weight-bold">Customer Reviews</h5>
+                        {% if reviews %}
+                            {% for review in reviews %}
+                                <div class="mb-3">
+                                    <p class="mb-1">
+                                        <small class="text-muted">– {{ review.date|date:"F j, Y" }}</small>
+                                    </p>
+                                    <p class="mb-0">{{ review.review }}</p>
+                                </div>
+                            {% endfor %}
+                        {% else %}
+                            <p class="text-muted">There are no reviews yet for this product.</p>
+                        {% endif %}
+                    </div>
+
                 </div>
             </div>
         </div>
