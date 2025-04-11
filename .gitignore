@@ -4,3 +4,5 @@
 __pycache__
 env.py
 create_issues.py
+/static/
+/media/
