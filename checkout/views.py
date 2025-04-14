@@ -58,6 +58,14 @@ def checkout(request):
             order.stripe_pid = pid
             order.original_bag = json.dumps(bag)
             order.save()
+
+            # Store guest order in session for later access
+            if not request.user.is_authenticated:
+                if 'guest_orders' not in request.session:
+                    request.session['guest_orders'] = []
+                request.session['guest_orders'].append(order.order_number)
+                request.session.modified = True
+
             for item_id, item_data in bag.items():
                 try:
                     product = Product.objects.get(id=item_id)
@@ -151,24 +159,20 @@ def checkout_success(request, order_number):
     """
     save_info = request.session.get('save_info')
 
-    try:
-        # Ensure the order exists and belongs to the current user
-        if request.user.is_authenticated:
-            profile = UserProfile.objects.get(user=request.user)
-            order = get_object_or_404(Order, order_number=order_number, user_profile=profile)
-        else:
-            # For anonymous checkouts, fall back to session-based ownership
-            order = get_object_or_404(Order, order_number=order_number)
-            if order.email.lower() != request.session.get('guest_email', '').lower():
-                return HttpResponseForbidden("You are not authorized to view this order.")
-    except (Order.DoesNotExist, UserProfile.DoesNotExist):
-        return HttpResponseForbidden("You are not authorized to view this order.")
-
     if request.user.is_authenticated:
-        # Already validated user ownership above
+        profile = UserProfile.objects.get(user=request.user)
+        order = get_object_or_404(Order, order_number=order_number, user_profile=profile)
+
+        # Attach the user's profile to the order
         order.user_profile = profile
         order.save()
+    else:
+        guest_orders = request.session.get('guest_orders', [])
+        if order_number not in guest_orders:
+            return HttpResponseForbidden("You are not authorized to view this order.")
+        order = get_object_or_404(Order, order_number=order_number)
 
+        # Save the user's info
         if save_info:
             profile_data = {
                 'default_phone_number': order.phone_number,
@@ -196,4 +200,3 @@ def checkout_success(request, order_number):
     }
 
     return render(request, template, context)
-
