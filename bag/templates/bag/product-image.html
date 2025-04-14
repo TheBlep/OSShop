@@ -1,6 +1,6 @@
-{% if item.product.image %}
-<img class="img-fluid rounded" src="{{ item.product.image }}" alt="{{ item.product.name }}">
-{% elif product.image_url %}
+{% if item.product.image_url %}
+<img class="img-fluid rounded" src="{{ item.product.image_url }}" alt="{{ item.product.name }}">
+{% elif product.image %}
 <img class="img-fluid rounded" src="{{ item.product.image }}" alt="{{ item.product.name }}">
 {% else %}
 <img class="img-fluid rounded" src="/media/noimage.png" alt="{{ item.product.name }}">
