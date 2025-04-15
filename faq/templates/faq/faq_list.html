@@ -1,15 +1,26 @@
 {% extends "base.html" %}
+#{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
 
 {% block content %}
-<h2 class="mb-4">Frequently Asked Questions</h2>
+<div class="overlay"></div>
+<div class="container px-4 px-md-5">
+    <h2 class="mb-4">Frequently Asked Questions</h2>
 
-{% for faq in faqs %}
-    <div class="mb-4">
-        <h5 class="font-weight-bold">{{ faq.question }}</h5>
-        <p>{{ faq.answer }}</p>
-    </div>
-{% empty %}
-    <p>No FAQs available at the moment.</p>
-{% endfor %}
-
+    {% for faq in faqs %}
+        <div class="mb-4">
+            <h5 class="font-weight-bold">{{ faq.question }}</h5>
+            <p>{{ faq.answer }}</p>
+        </div>
+    {% empty %}
+        <p>No FAQs available at the moment.</p>
+    {% endfor %}
+</div>
 {% endblock %}
