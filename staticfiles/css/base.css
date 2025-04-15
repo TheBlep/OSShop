@@ -12,6 +12,10 @@ body {
     font-style: normal;
 }
 
+.another_logo {
+    display: inline;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
