@@ -105,6 +105,7 @@
                     <!-- Customer Reviews Section -->
                     <div class="mt-5 pt-4 border-top">
                         <h5 class="mb-3 font-weight-bold">Customer Reviews</h5>
+
                         {% if reviews %}
                             {% for review in reviews %}
                                 <div class="mb-3">
@@ -117,8 +118,25 @@
                         {% else %}
                             <p class="text-muted">There are no reviews yet for this product.</p>
                         {% endif %}
-                    </div>
 
+                        <p class="mt-4">Write a review for {{ product.name }}</p>
+
+                        {% if user.is_authenticated %}
+                            {% if user_review %}
+                                <p class="text-muted">You have already reviewed this product.</p>
+                            {% else %}
+                                <form method="post">
+                                    {% csrf_token %}
+                                    {{ form.as_p }}
+                                    <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-3" value="Submit Review">
+                                </form>
+                            {% endif %}
+                        {% else %}
+                            <p>
+                                <a href="{% url 'account_login' %}?next={{ request.path }}">Log in</a> to write a review.
+                            </p>
+                        {% endif %}
+                    </div>
                 </div>
             </div>
         </div>

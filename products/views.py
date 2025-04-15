@@ -1,11 +1,12 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import REDIRECT_FIELD_NAME
 from django.db.models import Q
 from django.db.models.functions import Lower
 
 from .models import Product, Category, Review
-from .forms import ProductForm
+from .forms import ProductForm, ReviewForm
 
 # Create your views here.
 
@@ -61,20 +62,51 @@ def all_products(request):
     return render(request, 'products/products.html', context)
 
 
+# def product_detail(request, product_id):
+#     """ A view to show individual product details """
+
+#     product = get_object_or_404(Product, pk=product_id)
+#     reviews = Review.objects.filter(product=product)
+
+#     context = {
+#         'product': product,
+#         'reviews': reviews,
+#     }
+
+#     return render(request, 'products/product_detail.html', context)
+
 def product_detail(request, product_id):
-    """ A view to show individual product details """
+    """ A view to show individual product details and handle review submission """
 
     product = get_object_or_404(Product, pk=product_id)
     reviews = Review.objects.filter(product=product)
 
+    user_review = None
+
+    if request.user.is_authenticated:
+        user_review = Review.objects.filter(product=product, user=request.user).first()
+
+    form = None
+    if request.user.is_authenticated and not user_review:
+        if request.method == 'POST':
+            form = ReviewForm(request.POST)
+            if form.is_valid():
+                review = form.save(commit=False)
+                review.product = product
+                review.user = request.user
+                review.save()
+                return redirect(request.path)
+        else:
+            form = ReviewForm()
+            
     context = {
         'product': product,
         'reviews': reviews,
+        'form': form,
+        'user_review': user_review,
     }
 
     return render(request, 'products/product_detail.html', context)
-
-
 
 @login_required
 def add_product(request):
@@ -146,3 +178,21 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+@login_required
+def submit_review(request, product_id):
+    product = get_object_or_404(Product, id=product_id)
+
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.product = product
+            review.user = request.user
+            review.save()
+            return redirect('product_detail', product_id=product.id)
+    else:
+        form = ReviewForm()
+
+    return render(request, 'reviews/submit_review.html', {'form': form, 'product': product})
+
