@@ -1,0 +1,15 @@
+<!-- Newsletter Signup -->
+<div class="newsletter-signup bg-light py-5 mt-5 border-top">
+    <div class="container">
+        <h5 class="mb-3">Stay Updated</h5>
+        <form class="form-inline" method="post" action="#">
+            {% csrf_token %}
+            <div class="form-group mb-2 mr-2">
+                <label for="newsletter-email" class="sr-only">Email address</label>
+                <input type="email" class="form-control" id="newsletter-email" placeholder="Enter your email" required>
+            </div>
+            <button type="submit" class="btn btn-black mb-2">Subscribe</button>
+        </form>
+        <p class="text-muted small mt-2">* This is a demo — no emails are collected.</p>
+    </div>
+</div>

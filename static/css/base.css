@@ -12,6 +12,10 @@ body {
     font-style: normal;
 }
 
+.another_logo {
+    display: inline;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -19,6 +23,14 @@ body {
     justify-content: center;
     height: 1.5rem;
     width: 1.5rem;
+}
+
+
+.newsletter-signup {
+    background-color: #f8f9fa;
+    padding: 3rem 0;
+    margin-top: auto; /* pushes to bottom if there's empty space */
+    border-top: 1px solid #dee2e6;
 }
 
 .logo-font {
