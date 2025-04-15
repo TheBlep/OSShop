@@ -9,7 +9,7 @@
             "price": 59.99,
             "category": 1,
             "rating": 4.8,
-            "image_url": "static/images/raspberry-pi_4gb.jpg",
+            "image_url": "https://res.cloudinary.com/dmgnvgw7r/image/upload/c_thumb,w_200,g_face/v1744276735/raspberry-pi_4gb_mnoesy.jpg",
             "image": "rpi5.jpg"
         }
     },
@@ -23,7 +23,7 @@
             "price": 12.99,
             "category": 2,
             "rating": 4.5,
-            "image_url": "https://picsum.photos/640/480?random=2",
+            "image_url": "https://res.cloudinary.com/dmgnvgw7r/image/upload/c_thumb,w_200,g_face/v1744276736/esp32-cam_wifi_bluetooth_module_iq7ul5.jpg",
             "image": "esp32-cam.jpg"
         }
     },
@@ -37,7 +37,7 @@
             "price": 799.00,
             "category": 11,
             "rating": 4.9,
-            "image_url": "https://picsum.photos/640/480?random=3",
+            "image_url": "https://res.cloudinary.com/dmgnvgw7r/image/upload/c_thumb,w_200,g_face/v1744276738/original_prusa_mk4_3d_printer_g3svoj.jpg",
             "image": "prusa-mk4.jpg"
         }
     },
@@ -51,7 +51,7 @@
             "price": 29.99,
             "category": 6,
             "rating": 4.7,
-            "image_url": "https://picsum.photos/640/480?random=4",
+            "image_url": "https://res.cloudinary.com/dmgnvgw7r/image/upload/c_thumb,w_200,g_face/v1744276735/srduino_sensor_kit_37-in-1_wuackp.jpg",
             "image": "arduino-kit.jpg"
         }
     },
@@ -65,7 +65,7 @@
             "price": 149.99,
             "category": 9,
             "rating": 4.4,
-            "image_url": "https://picsum.photos/640/480?random=5",
+            "image_url": "https://res.cloudinary.com/dmgnvgw7r/image/upload/c_thumb,w_200,g_face/v1744276737/6-axis_robot_arm_kit_kyyioq.jpg",
             "image": "robot-arm.jpg"
         }
     },
@@ -79,7 +79,7 @@
             "price": 45.99,
             "category": 7,
             "rating": 4.3,
-            "image_url": "https://picsum.photos/640/480?random=6",
+            "image_url": "https://res.cloudinary.com/dmgnvgw7r/image/upload/c_thumb,w_200,g_face/v1744276735/lo-rawan_node_kit_p9xmb0.jpg",
             "image": "lora-node.jpg"
         }
     },
@@ -93,7 +93,7 @@
             "price": 6.99,
             "category": 1,
             "rating": 4.6,
-            "image_url": "https://picsum.photos/640/480?random=7",
+            "image_url": "https://res.cloudinary.com/dmgnvgw7r/image/upload/c_thumb,w_200,g_face/v1744276734/raspberry_pi_pico_w_grkiob.jpg",
             "image": "pico-w.jpg"
         }
     },
@@ -107,7 +107,7 @@
             "price": 8.49,
             "category": 2,
             "rating": 4.2,
-            "image_url": "https://picsum.photos/640/480?random=8",
+            "image_url": "https://res.cloudinary.com/dmgnvgw7r/image/upload/c_thumb,w_200,g_face/v1744276735/oled_display_qpmatw.jpg",
             "image": "oled-display.jpg"
         }
     },
@@ -121,7 +121,7 @@
             "price": 34.99,
             "category": 5,
             "rating": 4.0,
-            "image_url": "https://picsum.photos/640/480?random=9",
+            "image_url": "https://res.cloudinary.com/dmgnvgw7r/image/upload/c_thumb,w_200,g_face/v1744276737/pcb-etching-kit_aaoujy.jpg",
             "image": "pcb-kit.jpg"
         }
     },
@@ -135,7 +135,7 @@
             "price": 199.99,
             "category": 9,
             "rating": 4.5,
-            "image_url": "https://picsum.photos/640/480?random=10",
+            "image_url": "https://res.cloudinary.com/dmgnvgw7r/image/upload/c_thumb,w_200,g_face/v1744276738/open_source_drone_kit_f6yaba.png",
             "image": "drone-kit.jpg"
         }
     },
@@ -149,7 +149,7 @@
             "price": 15.99,
             "category": 5,
             "rating": 4.1,
-            "image_url": "https://picsum.photos/640/480?random=11",
+            "image_url": "https://res.cloudinary.com/dmgnvgw7r/image/upload/c_thumb,w_200,g_face/v1744276736/jst_cable_kit_afsjix.jpg",
             "image": "jst-cables.jpg"
         }
     },
@@ -163,7 +163,7 @@
             "price": 39.99,
             "category": 2,
             "rating": 4.4,
-            "image_url": "https://picsum.photos/640/480?random=12",
+            "image_url": "https://res.cloudinary.com/dmgnvgw7r/image/upload/c_thumb,w_200,g_face/v1744276734/open-cv_camera_module_ykvtvd.jpg",
             "image": "opencv-cam.jpg"
         }
     },
@@ -177,7 +177,7 @@
             "price": 9.99,
             "category": 10,
             "rating": 4.7,
-            "image_url": "https://picsum.photos/640/480?random=13",
+            "image_url": "https://res.cloudinary.com/dmgnvgw7r/image/upload/c_thumb,w_200,g_face/v1744276735/realtime-operating-systems-for-embedded-systems_d3qhgq.jpg",
             "image": "rtos-book.jpg"
         }
     },
@@ -191,7 +191,7 @@
             "price": 7.49,
             "category": 5,
             "rating": 4.3,
-            "image_url": "https://picsum.photos/640/480?random=14",
+            "image_url": "https://res.cloudinary.com/dmgnvgw7r/image/upload/c_thumb,w_200,g_face/v1744276736/breadboard_power_supply_3.3-5v_txvetk.jpg",
             "image": "breadboard-psu.jpg"
         }
     },
@@ -205,7 +205,7 @@
             "price": 49.99,
             "category": 5,
             "rating": 4.8,
-            "image_url": "https://picsum.photos/640/480?random=15",
+            "image_url": "https://res.cloudinary.com/dmgnvgw7r/image/upload/c_thumb,w_200,g_face/v1744276736/digital_soldering_station_60w_guspjb.jpg",
             "image": "solder-station.jpg"
         }
     },
@@ -219,7 +219,7 @@
             "price": 22.99,
             "category": 1,
             "rating": 4.2,
-            "image_url": "https://picsum.photos/640/480?random=16",
+            "image_url": "https://res.cloudinary.com/dmgnvgw7r/image/upload/c_thumb,w_200,g_face/v1744276735/raspberry_pi_poe_rmf4st.jpg",
             "image": "poe-hat.jpg"
         }
     },
@@ -233,7 +233,7 @@
             "price": 299.99,
             "category": 8,
             "rating": 4.6,
-            "image_url": "https://picsum.photos/640/480?random=17",
+            "image_url": "https://res.cloudinary.com/dmgnvgw7r/image/upload/c_thumb,w_200,g_face/v1744276738/open_source_smartphone_kit_wl1ply.jpg",
             "image": "opensource-phone.jpg"
         }
     },
@@ -247,7 +247,7 @@
             "price": 19.99,
             "category": 11,
             "rating": 4.5,
-            "image_url": "https://picsum.photos/640/480?random=18",
+            "image_url": "https://res.cloudinary.com/dmgnvgw7r/image/upload/c_thumb,w_200,g_face/v1744276737/pla_filament_dwwhgg.jpg",
             "image": "pla-filament.jpg"
         }
     },
@@ -261,7 +261,7 @@
             "price": 5.99,
             "category": 3,
             "rating": 4.0,
-            "image_url": "https://picsum.photos/640/480?random=19",
+            "image_url": "https://res.cloudinary.com/dmgnvgw7r/image/upload/c_thumb,w_200,g_face/v1744276735/oled_display_clear_qbgwyb.jpg",
             "image": "clearance-oled.jpg"
         }
     },
@@ -275,7 +275,7 @@
             "price": 16.99,
             "category": 2,
             "rating": 4.3,
-            "image_url": "https://picsum.photos/640/480?random=20",
+            "image_url": "https://res.cloudinary.com/dmgnvgw7r/image/upload/c_thumb,w_200,g_face/v1744276736/gps_module_uart_nvh8l4.jpg",
             "image": "gps-module.jpg"
         }
     }
