@@ -17,18 +17,19 @@
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
                 <div class="image-container my-5">
                     {% if product.image_url %}
-                        <a href="{{ product.image_url }}" target="_blank">
-                            <img class="card-img-top img-fluid" src="{{ product.image_url }}" alt="{{ product.name }}">
-                        </a>
+                    <a href="{% url 'product_detail' product.id %}">
+                        <img class="card-img-top img-fluid" src="{{ product.image_url }}" alt="{{ product.name }}">
+                    </a>
                     {% elif product.image %}
-                        <a href="{{ product.image }}" target="_blank">
-                            <img class="card-img-top img-fluid" src="{{ product.image }}" alt="{{ product.name }}">
-                        </a>
+                    <a href="{% url 'product_detail' product.id %}">
+                        <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                    </a>
                     {% else %}
-                        <a href="">
-                            <img class="card-img-top img-fluid" src="/media/noimage.png" alt="{{ product.name }}">
-                        </a>
+                    <a href="{% url 'product_detail' product.id %}">
+                        <img class="card-img-top img-fluid" src="/media/noimage.png" alt="{{ product.name }}">
+                    </a>
                     {% endif %}
+                
                     
                 </div>
             </div>
@@ -136,6 +137,7 @@
                                 <a href="{% url 'account_login' %}?next={{ request.path }}">Log in</a> to write a review.
                             </p>
                         {% endif %}
+                        
                     </div>
                 </div>
             </div>
