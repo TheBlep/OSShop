@@ -59,8 +59,10 @@ def checkout(request):
             order.original_bag = json.dumps(bag)
             order.save()
 
-            order.user_profile = request.user.userprofile
-            order.save()
+            if request.user.is_authenticated:
+                order.user_profile = request.user.userprofile
+                order.save()
+
 
             # Store guest order in session for later access
             if not request.user.is_authenticated:
