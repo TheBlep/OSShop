@@ -196,3 +196,14 @@ def submit_review(request, product_id):
 
     return render(request, 'reviews/submit_review.html', {'form': form, 'product': product})
 
+@login_required
+def delete_review(request, review_id):
+    review = get_object_or_404(Review, id=review_id)
+
+    if review.user == request.user:
+        product_id = review.product.id
+        review.delete()
+        return redirect('product_detail', product_id=product_id)
+
+    return redirect('product_detail', product_id=review.product.id)
+
