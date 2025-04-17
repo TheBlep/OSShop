@@ -114,9 +114,7 @@
                                 <div class="mb-3">
                                     <p class="mb-1 d-flex justify-content-between align-items-center">
                                         <small class="text-muted">– {{ review.date|date:"F j, Y" }}</small>
-                            
-                                        class="mb-0">{{ review.review }}
-
+                                        <p class="mb-0">{{ review.review }}</p>
                                         {% if review.user == user %}
                                             <form action="{% url 'delete_review' review.id %}" method="post" class="d-inline mb-0">
                                                 {% csrf_token %}
