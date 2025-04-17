@@ -58,7 +58,7 @@ def checkout(request):
             order.stripe_pid = pid
             order.original_bag = json.dumps(bag)
             order.save()
-            
+
             order.user_profile = request.user.userprofile
             order.save()
 
@@ -191,8 +191,7 @@ def checkout_success(request, order_number):
                 user_profile_form.save()
 
     messages.success(request, f'Order successfully processed! \
-        Your order number is {order_number}. A confirmation \
-        email will be sent to {order.email}.')
+        Your order number is {order_number}.')
 
     if 'bag' in request.session:
         del request.session['bag']
