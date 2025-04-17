@@ -8,7 +8,7 @@ def contact_view(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
-            # For now, just show a success message — no email or DB
+            form.save()  # ✅ Save the form data to the database
             messages.success(request, "Thanks for contacting us! We’ll get back to you soon.")
             return redirect('contact')
 
