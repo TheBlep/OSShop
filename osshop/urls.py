@@ -1,4 +1,4 @@
-"""boutique_ado URL Configuration
+"""osshop URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
@@ -33,4 +33,4 @@ urlpatterns = [
     path('faq/', include('faq.urls')),
     path('contact/', include('contact.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-handler404 = 'boutique_ado.views.handler404'
+handler404 = 'osshop.views.handler404'
