@@ -464,7 +464,8 @@ The email address list can be accessed from django admin.
 Due to the amount of time had to finish the project there are a few:
 	- The newsletter signup does not send confirmation of signup
 		- can be fixed by creating a specific app for it and connecting it to the toasts
-	-
+	- The tags used for the navigation menu were only seen last minute to be incompatible.
+		- can be fixed with proper research into what tag may nest (button, li, lu and div tags)
 
 ### Manual Testing Protocol
 <details>
@@ -568,12 +569,16 @@ Due to the amount of time had to finish the project there are a few:
 - **CSS**: Validated using the [Jigsaw W3 Validator](https://jigsaw.w3.org/css-validator/)
 - **JavaScript**: Validated using [JS Hint](https://jshint.com)
 - **Python**: Validated using the [CI Python Linter](https://pep8ci.herokuapp.com/)
-- **Performance**: Validated using [Lighthouse](https://developers.google.com/web/tools/lighthouse/)
-- **Rich results** Validated using [Rich text test](https://search.google.com/test/rich-results/result?id=Gfu7gG7eXs8eFwfpV9mgQw)
+- **Performance**: Validated using [Pagespeed](https://pagespeed.web.dev/)
 
+As can be seen there are some errors here that arose last minute due to tags. 
+All other errors were fixed. Please see Known bugs above for further information.
+The CSS is perfect and with some tweaking, the performance and Accessability are also quite high.
 
-**See detailed [Test Report](documentation/TESTING.md)**
-**See [Bug Report](documentation/BUGS.md)**
+![W3C](media/readme/testing/w3cerrors.png)
+![CSS](media/readme/testing/basecss.png)
+![Pagespeed](media/readme/testing/pagespeeddesktop.png)
+![Pagespeedmobile](media/readme/testing/pagespeedmobile.png)
 
 
 ## Deployment

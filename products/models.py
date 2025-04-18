@@ -47,5 +47,3 @@ class Review(models.Model):
     def __str__(self):
         return f"Review for {self.product.name} by {self.user.username}"
 
-    # def get_rating(self):
-    #     return self.rating
