@@ -406,6 +406,10 @@ The newsletter subscription list enables the business to communicate regularly w
 
 ## Search Engine Optimization (SEO) & Social Media Marketing
 
+<details><summary><strong>Mock facebook pages using the given template</strong></summary>
+
+![Socialtemplate](media/readme/facebook.png)
+
 <details><summary><strong>Keywords</strong></summary>
 
 ## Keywords
