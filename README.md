@@ -408,7 +408,7 @@ The newsletter subscription list enables the business to communicate regularly w
 
 <details><summary><strong>Mock facebook pages using the given template</strong></summary>
 
-![Socialtemplate](media/readme/facebook.png)
+![Socialtemplate](media/readme/Yourfp.jpg)
 
 <details><summary><strong>Keywords</strong></summary>
 
